@@ -1,0 +1,47 @@
+﻿Build started 7/14/2013 6:47:06 PM.
+     1>Project "D:\users\Chris\documents\visual studio 2012\Projects\RPGEngine\RPGEngine\RPGEngine.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Programs\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ID:\Programs\Lua\5.1\include /I"D:\Development\SDL_image-1.2.12\include" /I"D:\Development\SDL-1.2.15\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt MenuAPI.cpp
+         MenuAPI.cpp
+       Link:
+         D:\Programs\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\users\Chris\documents\visual studio 2012\Projects\RPGEngine\Debug\RPGEngine.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Development\libogg\libogg-1.3.1\lib" /LIBPATH:"D:\Development\libvorbis-1.3.3\libvorbis-1.3.3\lib2" /LIBPATH:D:\Programs\Lua\5.1\lib /LIBPATH:"D:\Development\SDL_image-1.2.12\lib\x86" /LIBPATH:"D:\Development\SDL-1.2.15\lib\x86" SDLmain.lib SDL_image.lib SDL.lib SDL_ttf.lib lua51.lib OpenAL32.lib libvorbis_static.lib libvorbisfile_static.lib lua5.1.lib physfs.lib libogg.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\users\Chris\documents\visual studio 2012\Projects\RPGEngine\Debug\RPGEngine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\users\Chris\documents\visual studio 2012\Projects\RPGEngine\Debug\RPGEngine.lib" /MACHINE:X86 Debug\AudioAPI.obj
+         Debug\Color.obj
+         Debug\Drawable.obj
+         Debug\DrawableAPI.obj
+         Debug\ExportableToLua.obj
+         Debug\FileTools.obj
+         Debug\GameAPI.obj
+         Debug\InputEvent.obj
+         Debug\main.obj
+         Debug\MainAPI.obj
+         Debug\MainLoop.obj
+         Debug\MenuAPI.obj
+         Debug\QuestProperties.obj
+         Debug\QuestResourceList.obj
+         Debug\Random.obj
+         Debug\Rectangle.obj
+         Debug\Savegame.obj
+         Debug\Settings.obj
+         Debug\Sound.obj
+         Debug\Sprite.obj
+         Debug\StringResource.obj
+         Debug\Surface.obj
+         Debug\SurfaceAPI.obj
+         Debug\System.obj
+         Debug\TextSurface.obj
+         Debug\TextSurfaceAPI.obj
+         Debug\Timer.obj
+         Debug\TimerAPI.obj
+         Debug\Transition.obj
+         Debug\TransitionFade.obj
+         Debug\VideoManager.obj
+         Debug\LuaContext.obj
+     1>LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+         RPGEngine.vcxproj -> D:\users\Chris\documents\visual studio 2012\Projects\RPGEngine\Debug\RPGEngine.exe
+       BscMake:
+         D:\Programs\Microsoft Visual Studio 11.0\VC\bin\bscmake.exe /nologo /o"D:\users\Chris\documents\visual studio 2012\Projects\RPGEngine\Debug\RPGEngine.bsc" /n Debug\AudioAPI.sbr Debug\Color.sbr Debug\Drawable.sbr Debug\DrawableAPI.sbr Debug\ExportableToLua.sbr Debug\FileTools.sbr Debug\GameAPI.sbr Debug\InputEvent.sbr Debug\main.sbr Debug\MainAPI.sbr Debug\MainLoop.sbr Debug\MenuAPI.sbr Debug\QuestProperties.sbr Debug\QuestResourceList.sbr Debug\Random.sbr Debug\Rectangle.sbr Debug\Savegame.sbr Debug\Settings.sbr Debug\Sound.sbr Debug\Sprite.sbr Debug\StringResource.sbr Debug\Surface.sbr Debug\SurfaceAPI.sbr Debug\System.sbr Debug\TextSurface.sbr Debug\TextSurfaceAPI.sbr Debug\Timer.sbr Debug\TimerAPI.sbr Debug\Transition.sbr Debug\TransitionFade.sbr Debug\VideoManager.sbr Debug\LuaContext.sbr
+     1>Done Building Project "D:\users\Chris\documents\visual studio 2012\Projects\RPGEngine\RPGEngine\RPGEngine.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.87
