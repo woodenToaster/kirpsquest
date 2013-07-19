@@ -20,9 +20,9 @@ void LuaContext::register_game_module()
       //{ "exists", game_api_exists },
       //{ "delete", game_api_delete },
       { "load", game_api_load },
-      /*{ "save", game_api_save },
+      //{ "save", game_api_save },
       { "start", game_api_start },
-      { "is_started", game_api_is_started },
+      /*{ "is_started", game_api_is_started },
       { "is_suspended", game_api_is_suspended },
       { "is_paused", game_api_is_paused },
       { "set_paused", game_api_set_paused },
@@ -77,6 +77,29 @@ void LuaContext::register_game_module()
 }
 
 /**
+* \brief Returns whether a value is a userdata of type game.
+* \param l A Lua context.
+* \param index An index in the stack.
+* \return true if the value at this index is a game.
+*/
+bool LuaContext::is_game(lua_State* l, int index) 
+{
+  return is_userdata(l, index, game_module_name);
+}
+
+/**
+* \brief Checks that the userdata at the specified index of the stack is a
+* game and returns it.
+* \param l a Lua context
+* \param index an index in the stack
+* \return the game
+*/
+Savegame& LuaContext::check_game(lua_State* l, int index) 
+{
+  return static_cast<Savegame&>(check_userdata(l, index, game_module_name));
+}
+
+/**
 * \brief Pushes a game userdata onto the stack.
 * \param l A Lua context.
 * \param game A game.
@@ -109,3 +132,54 @@ int LuaContext::game_api_load(lua_State* l)
 	push_game(l, *savegame);
 	return 1;
 }
+
+/**
+* \brief Implementation of game:start().
+* \param l The Lua context that is calling this function.
+* \return Number of values to return to Lua.
+*/
+int LuaContext::game_api_start(lua_State* l)
+{
+	Savegame& savegame = check_game(l, 1);
+	
+	Game* game = savegame.get_game();
+	if(game != NULL)
+	{
+		//A game is already running with this savegame: restart it.
+		game->restart();
+	}
+	else
+	{
+		//Create a new game to run
+		MainLoop& main_loop = savegame.get_lua_context().get_main_loop();
+		Game* game = new Game(main_loop, &savegame);
+		main_loop.set_game(game);
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
