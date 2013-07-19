@@ -1,0 +1,3 @@
+Kirp's Quest is a 2D, crafting based, zelda-like rpg.  It is an educational project.  I'm going through the Solarus
+engine (christopho/Solarus on GitHub) line by line to understand how a traditional rpg works.  Kirp's Quest will use the 
+basic core of Solarus, but will have different graphics, sounds, rules, levels, and gameplay elements.  
